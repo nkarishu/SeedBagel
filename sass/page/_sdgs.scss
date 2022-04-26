@@ -1,0 +1,121 @@
+.sdgsmv {
+  @include flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10vh;
+
+  &__box1 {
+    width: 80%;
+  }
+
+  &__ttl {
+    font-size: 17px;
+    margin-bottom: 2vh;
+  }
+
+  &__txt {
+    margin-bottom: 2vh;
+  }
+
+  &__box2 {
+    // height: 40vh;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+  
+  &__sub {
+    position: absolute;
+    top: 47vh;
+    right: 2%;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 800;
+    opacity: 0.7;
+  }
+  
+  &__pic {
+    height: 70vh;
+    width: 100%;
+  }
+
+}
+
+.sdgsabout {
+  background: #fff;
+  padding: 10% 0;
+  margin-bottom: 15vh;
+  
+  &__ttl {
+    width: 80%;
+    margin: 0 auto 2vh;
+    font-size: 15px;
+  }
+  
+  &__txt {
+    width: 80%;
+    margin: 0 auto 2vh;
+  }
+}
+
+.sdgsmain {
+  margin-bottom: 10vh;
+
+  &:last-of-type {
+    padding-bottom: 10vh;
+  }
+
+  &__box1 {
+    position: relative;
+  }
+
+  &__sub {
+    position: absolute;
+    top: -2px;
+    left: 5px;
+    font-size: 60px;
+    font-weight: 800;
+    color: #fff;
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  &__pic {
+    height: 30vh;
+    width: auto;
+    margin-bottom: 2vh;
+  }
+
+  &__box2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__ttl {
+    font-size: 15px;
+    margin-bottom: 2vh;
+  }
+
+  &__txt {
+    margin-bottom: 2vh;
+  }
+
+  &__boxtxt {
+    font-size: 12px;
+    border: #000 1px solid;
+    padding: 5%;
+  }
+
+  &__sub2 {
+    font-size: 56px;
+  }
+
+  &__sub3 {
+    font-size: 50px;
+  }
+
+  &__last {
+    margin-bottom: 15vh;
+  }
+
+}

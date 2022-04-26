@@ -1,11 +1,17 @@
 @import "foundation/_reset";
+@import "foundation/_mixin";
 @import "foundation/_base";
 @import "foundation/_placeholder";
-@import "foundation/_mixin";
 @import "layout/_header";
 @import "layout/_nav";
 @import "layout/_sidebar";
 @import "layout/_footer";
+@import "page/_cafe";
+@import "page/_farm";
+@import "page/_news";
+@import "page/_saipan";
+@import "page/_sdgs";
+@import "page/_snowshack";
 @import "page/_index";
+@import "page/_info";
 @import "utility/_js"
-

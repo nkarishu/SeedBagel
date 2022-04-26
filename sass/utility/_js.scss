@@ -1,0 +1,35 @@
+.rotate-top {
+    transform: rotate(45deg);
+    background: #fff;
+}
+
+.hide-middle {
+    opacity: 0;
+    background: #fff;
+}
+
+.rotate-bottom {
+    transform: rotate(-45deg);
+    background: #fff;
+}
+
+.gnav-active {
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+
+.fadein {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+
+.footer__ttl.close::before {
+    transform: rotate(45deg);
+}
+
+.footer__ttl.close.close::after {
+    transform: rotate(-45deg);
+}

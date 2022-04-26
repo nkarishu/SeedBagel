@@ -1,0 +1,72 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6rem;
+  background: #FAF8F5;
+  font-size: 13px;
+}
+
+.saipanmv {
+  background: #D4C9B3;
+  height: 53vh;
+  @include flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10vh;
+  margin-bottom: 15vh;
+
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+  }
+
+  &__logo {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 5vh;
+    transform: translateY(30px) !important;
+    transition: all 3s;
+
+    @media screen and (min-width: 1024px) {
+      margin: 0vh auto 5vh;
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__pic {
+    width: 90%;
+    margin-bottom: 5vh;
+
+    @media screen and (min-width: 1024px) {
+      // margin: 20vh auto 5vh;
+      width: 50%;
+      height: auto;
+    }
+  }
+
+}
+
+.saipanabout,
+.saipanhistory,
+.saipanpan {
+  margin-bottom: 15vh;
+
+  &__ttl {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 2vh;
+  }
+
+  &__txt {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+  }
+
+  &__pic {
+    width: 80%;
+    height: 30vh;
+    margin: 0 auto 5vh;
+  }
+}

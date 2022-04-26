@@ -1,0 +1,258 @@
+.footer {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 553px;
+
+    @media screen and (min-width: 1024px) {
+        height: 580px;
+    }
+    
+    &__box {
+        padding-top: 7vh;
+        @include flex;
+    }
+    
+    &__line {
+        display: inline-block;
+        height: 1px;
+        width: 35%;
+        background: #fff;
+    }
+    
+    &__logo {
+        height: 75px;
+        width: 75px;
+    }
+    
+    &__menu {
+        margin: 0 auto;
+        @include flex;
+        width: 85%;
+        line-height: 3;
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: "area1 area2"
+        "area3 area4";
+        
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+        }
+    }
+
+    &__grid1 {
+        grid-area: "area1";
+    }
+
+    &__grid2 {
+        grid-area: "area2";
+        justify-self: end;
+    }
+
+    &__grid3 {
+        grid-area: "area3";
+    }
+
+    &__grid4 {
+        grid-area: "area4";
+        justify-self: end;
+    }
+
+    &__icon {
+        display: none !important;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &__line2 {
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background: #fff;
+        margin: 5vh 0 5vh 0;
+    }
+
+    &__unit {
+        width: 80%;
+        margin: 0 auto 5.5vh;
+    }
+
+    &__menu2 {
+        width: 85%;
+        margin: 0 auto 2vh;
+        line-height: 1.8;
+        font-size: 13px;
+    }
+
+    &__ttl {
+        font-weight: 800;
+        font-size: 14px;
+        padding-left: 24px;
+        position: relative;
+        margin-bottom: 1vh;
+
+        // *アイコンの＋と×*/ 
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 2px;
+            background-color: #D4CAAF;
+        }
+
+        &::before {
+            top: 48%;
+            left: 0px;
+            transform: rotate(0deg);
+
+        }
+
+        &::after {
+            top: 48%;
+            left: 0px;
+            transform: rotate(90deg);
+
+        }
+    }
+
+    &__txt2 {
+        font-size: 12px;
+        display: none;
+        /*はじめは非表示*/
+        margin-left: 24px;
+    }
+
+    &__calendar {
+        display: none;
+    }
+
+    &__icon {
+        display: none;
+    }
+
+    &__airbnb {
+        display: none;
+    }
+
+    &__link2 {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    &__line3 {
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 4vh;
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 5vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+
+        &__wrap {
+            padding-top: 8vh;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &__box {
+            padding: 0 0 4vh;
+        }
+
+        &__logo {
+            height: 130px;
+            width: 130px;
+        }
+
+        &__line {
+            width: 42%;
+        }
+
+        &__menu {
+            width: 80%;
+            margin-bottom: -7vh;
+            grid-template-columns: 22% 28% 28% 22%;
+            grid-template-areas: "area1 area2 area3 area4";
+        }
+
+        &__grid2 {
+            justify-self: left;
+        }
+
+        &__grid3 {
+            justify-self: right;
+        }
+
+        &__icon {
+            display: block !important;
+            margin-right: 10px;
+        }
+
+        &__link {
+            @include flex;
+            justify-content: start;
+        }
+
+        &__line2 {
+            display: none;
+        }
+
+        &__unit {
+            @include flex;
+            margin: 0 auto;
+            align-items: start;
+            padding-left: 7%;
+            width: 95%;
+        }
+
+        &__menu2 {
+            @include flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__ttl {
+            margin-bottom: 1.5vh;
+        }
+
+        &__txt2 {
+            margin-bottom: 2vh;
+        }
+
+        &__calendar {
+            display: block;
+            width: 70%;
+            height: auto;
+            margin-bottom: 2vh;
+        }
+
+        &__airbnb {
+            display: block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid #fff;
+            border-radius: 30px;
+            padding: 5px;
+            width: 72%;
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+main {
+  z-index: 2;
+  background: #FAF8F5;
+}
+
+.cafemv {
+  height: 100vh;
+  position: relative;
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 20vh;
+  }
+
+  &__logo {
+    z-index: 2;
+    width: 90%;
+    height: auto;
+    position: absolute;
+    top: 30vh;
+    left: 5%;
+
+    @media screen and (min-width: 1024px) {
+      top: 30vh;
+      left: 5%;
+      width: 50%;
+    }
+  }
+
+  &__png {
+    margin-bottom: 1vh;
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 3vh;
+    }
+  }
+
+  &__txt {
+    font-size: 15px;
+    margin-left: 5%;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+  }
+
+  &__pic {
+    height: 100vh;
+    width: 65%;
+    position: absolute;
+    left: 35%;
+  }
+
+  &__img {
+    background: #fff;
+    opacity: 0.6;
+  }
+
+}
+
+.cafeabout {
+  margin-bottom: 15vh;
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 30vh;
+  }
+
+  &__box1 {
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      margin: 5vh 0 0 12%;
+      height: 40vh;
+      width: 55%;
+    }
+  }
+
+  &__box2 {
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      margin: 5vh auto 0 auto;
+      height: 40vh;
+      width: 50%;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 60vh;
+        width: 140%;
+        background: #fff;
+        position: absolute;
+        top: -20vh;
+        left: -20%;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__ttl {
+    margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      font-size: 26px;
+    }
+  }
+
+  &__ttl2 {
+    margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+    }
+  }
+
+  &__txt {
+    font-size: 13px;
+    margin-bottom: 2vh;
+  }
+
+  &__pic1 {
+    margin: 15vh 0 0 auto;
+    height: 35vh;
+    width: 90%;
+
+    @media screen and (min-width: 1024px) {
+      margin: 15vh auto 0 0;
+      height: 60vh;
+      width: 60%;
+    }
+  }
+
+  &__pic2 {
+    margin: 2vh 0 5vh;
+    height: 30vh;
+    width: 70%;
+
+    @media screen and (min-width: 1024px) {
+      // margin: -20vh 0 0 45%;
+      // height: 25vh;
+      // width: 25%;
+      display: none;
+    }
+  }
+
+  &__pic3 {
+    margin: 5vh 0 15vh auto;
+    height: 35vh;
+    width: 90%;
+
+    @media screen and (min-width: 1024px) {
+      margin: -50vh 0 0 auto;
+      height: 60vh;
+      width: 25%;
+    }
+  }
+
+  &__pic4 {
+    margin: 0 5% 5vh 5%;
+    height: 30vh;
+
+    @media screen and (min-width: 1024px) {
+      margin: 15vh auto 0 auto;
+      height: 50vh;
+      width: 60%;
+    }
+  }
+
+  &__pic5 {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+      margin: -65vh 0 0 auto;
+      height: 55vh;
+      width: 25%;
+    }
+  }
+}
+
+.cafebagels {
+  width: 80%;
+  margin: 0 auto 25vh;
+  text-align: center;
+
+  &__ttl {
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      margin-bottom: 2vh;
+    }
+  }
+
+  &__txt {
+    font-size: 13px;
+    margin-bottom: 2vh;
+  }
+}
+
+.swiper1 {
+  width: 100%;
+  height: 28vh;
+
+  @media screen and (min-width: 1024px) {
+    height: 40vh;
+    background: red;
+  }
+
+  &-wrapper {
+    height: auto !important;
+  }
+
+  &-slide {
+    @include flex;
+    flex-direction: column;
+  }
+
+  &-pic {
+    width: 40%;
+
+    @media screen and (min-width: 1024px) {
+      width: 30%;
+    }
+  }
+
+  &-button-prev::after,
+  &-button-next::after {
+    color: lightgrey;
+  }
+
+  &-scrollbar {
+    display: none;
+  }
+}

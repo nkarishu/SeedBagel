@@ -1,0 +1,55 @@
+.farmmv {
+  margin-bottom: 10vh;
+  padding-top: 15vh;
+
+  &__logo {
+    width: 80%;
+    margin: 0 0 2vh 5%;
+  }
+
+  &__txt {
+    margin: 0 0 5vh 5%;
+  }
+
+  &__pic {
+    height: 30vh;
+  }
+
+  &__pic2 {
+    height: 12vh;
+    width: 30%;
+    margin: -6vh 0 0 60%;
+  }
+
+  &__img {
+    object-fit: fill;
+  }
+}
+
+.farmabout {
+  width: 80%;
+  margin: 0 auto 15vh;
+
+  &__ttl {
+    font-size: 15px;
+    margin-bottom: 2vh;
+  }
+
+  &__txt {
+    margin-bottom: 2vh;
+  }
+}
+
+.farmhistory {
+  width: 80%;
+  margin: 0 auto 15vh;
+
+  &__ttl {
+    font-size: 15px;
+    margin-bottom: 2vh;
+  }
+
+  &__txt {
+    margin-bottom: 2vh;
+  }
+}
