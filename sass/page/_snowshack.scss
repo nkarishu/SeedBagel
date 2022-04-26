@@ -4,11 +4,31 @@
   &__pic {
     height: 80vh;
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      height: 100vh;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(180deg, transparent 0 60%, #FAF8F5 100%);
+      }
+    }
   }
 
   &__ttl {
     font-size: 24px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 88px;
+      letter-spacing: 6px;
+      margin: 5vh 0 8vh;
+    }
   }
 
   &__txt {
@@ -19,27 +39,63 @@
 .ssabout {
   margin-bottom: 15vh;
 
-  &__unit {
-    display: none;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 30vh;
   }
 
   &__pic1 {
     width: 100%;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+      height: 80vh;
+      margin: 0 auto;
+    }
   }
+
+  &__img {
+    @media screen and (min-width: 1024px) {
+      border-radius: 10px;
+    }
+  }
+
+  // &__unit {
+  //   display: none;
+
+  //   @media screen and (min-width: 1024px) {
+  //     display: block;
+  //     @include flex;
+  //     gap: 10px;
+  //     width: 80%;
+  //     margin: 10px auto 5vh;
+  //   }
+  // }
 
   &__pic2 {
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      height: 200px;
+    }
   }
 
   &__txt {
     width: 80%;
     margin: 0 auto 5vh;
+
+    @media screen and (min-width: 1024px) {
+      width: 75%;
+    }
   }
 
   &__boxes {
     width: 80%;
     margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      @include flex;
+    }
   }
 
   &__line {
@@ -47,12 +103,32 @@
     background: #000;
     height: 1px;
     margin: 2vh 0;
+
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+      margin: 0vh auto;
+    }
+  }
+
+  &__inline {
+    @extend .ssabout__line;
+
+    @media screen and (min-width: 1024px) {
+      height: 200px;
+      width: 2px;
+      margin: 2vh 0;
+    }
   }
 
   &__box1,
   &__box2 {
     width: 90%;
     margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+      margin-left: 10%;
+    }
   }
 
   &__sub {
@@ -64,13 +140,26 @@
   width: 80%;
   margin: 0 auto 15vh;
 
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 30vh;
+  }
+
   &__ttl {
     font-size: 15px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      text-align: center;
+    }
   }
 
   &__txt {
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      text-align: center;
+    }
   }
 }
 
@@ -137,12 +226,21 @@
     margin: 0 auto 15vh;
     font-size: 15px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      text-align: center;
+    }
   }
 
   &__pic {
     width: auto;
-    // height: 25vh;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      width: 90%;
+      margin: 0 auto 2vh;
+    }
   }
 
   &__txt {
@@ -156,5 +254,5 @@
   font-size: 50px;
   font-weight: 800;
   width: 85%;
-  margin: 5vh auto -10vh;
+  margin: 5vh auto -10vh 80px;
 }

@@ -2,27 +2,59 @@
   margin-bottom: 10vh;
   padding-top: 15vh;
 
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+    padding-top: 21vh;
+    margin-bottom: 20vh;
+  }
+
   &__logo {
     width: 80%;
     margin: 0 0 2vh 5%;
+
+    @media screen and (min-width: 1024px) {
+      width: 60%;
+    }
   }
 
   &__txt {
     margin: 0 0 5vh 5%;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+    }
   }
 
   &__pic {
     height: 30vh;
+
+    @media screen and (min-width: 1024px) {
+      height: 50vh;
+      background: #fff;
+      opacity: 0.8;
+      filter: blur(2px);
+    }
   }
 
   &__pic2 {
     height: 12vh;
     width: 30%;
     margin: -6vh 0 0 60%;
+
+    @media screen and (min-width: 1024px) {
+      height: 45vh;
+      width: 30%;
+      margin: -10vh 0 0 77%;
+    }
   }
 
   &__img {
     object-fit: fill;
+
+    @media screen and (min-width: 1024px) {
+      transform: rotate(-40deg);
+      opacity: 0.5;
+    }
   }
 }
 
@@ -30,26 +62,88 @@
   width: 80%;
   margin: 0 auto 15vh;
 
+  @media screen and (min-width: 1024px) {
+    text-align: center;
+    margin-bottom: 30vh;
+  }
+
   &__ttl {
     font-size: 15px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 26px;
+      margin-bottom: 3vh;
+    }
   }
 
   &__txt {
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+      margin: 0 auto 2vh;
+    }
+  }
+
+  &__pic {
+    @media screen and (min-width: 1024px) {
+      margin: 5vh auto 0;
+      width: 90%;
+      height: 55vh;
+    }
   }
 }
 
 .farmhistory {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 15vh;
+  padding: 10vh 5%;
+
+  @media screen and (min-width: 1024px) {
+    @include flex;
+    margin-bottom: 30vh;
+    background: rgb(255, 255, 255);
+  }
 
   &__ttl {
     font-size: 15px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      margin-bottom: 5vh;
+    }
   }
 
   &__txt {
     margin-bottom: 2vh;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__txtunit {
+      flex-basis: 50%;
+      margin-right: 5%;
+    }
+
+    &__picunit {
+      flex-basis: 50%;
+    }
+
+    &__box {
+      @include flex;
+    }
+
+    &__pic2 {
+      flex-basis: 40%;
+      height: 200px;
+      margin-right: 10px;
+    }
+
+    &__pic3 {
+      flex-basis: 60%;
+      height: 200px;
+    }
+
   }
 }
