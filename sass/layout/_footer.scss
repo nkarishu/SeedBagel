@@ -6,42 +6,62 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 553px;
 
-    @media screen and (min-width: 1024px) {
-        height: 580px;
+    &__wrap {
+        @media screen and (min-width: 1024px) {
+            padding-top: 8vh;
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
-    
+
     &__box {
         padding-top: 7vh;
         @include flex;
+
+        @media screen and (min-width: 1024px) {
+            padding: 0;
+        }
     }
-    
+
     &__line {
         display: inline-block;
         height: 1px;
         width: 35%;
         background: #fff;
+
+        @media screen and (min-width: 1024px) {
+            width: 42%;
+        }
     }
-    
+
     &__logo {
         height: 75px;
         width: 75px;
+
+        @media screen and (min-width: 1024px) {
+            height: 130px;
+            width: 130px;
+        }
     }
-    
+
     &__menu {
         margin: 0 auto;
         @include flex;
         width: 85%;
         line-height: 3;
         display: grid;
-        grid-template-columns: repeat(1fr);
-        grid-template-rows: repeat(1fr);
+        grid-template-columns: repeat(1fr 1fr);
+        grid-template-rows: repeat(1fr 1fr);
         grid-template-areas: "area1 area2"
-        "area3 area4";
-        
+            "area3 area4";
+
         @media screen and (min-width: 1024px) {
             font-size: 16px;
+            width: 80%;
+            margin-bottom: -7vh;
+            grid-template-columns: 22% 28% 28% 22%;
+            grid-template-areas: "area1 area2 area3 area4";
         }
     }
 
@@ -52,10 +72,18 @@
     &__grid2 {
         grid-area: "area2";
         justify-self: end;
+
+        @media screen and (min-width: 1024px) {
+            justify-self: left;
+        }
     }
 
     &__grid3 {
         grid-area: "area3";
+
+        @media screen and (min-width: 1024px) {
+            justify-self: right;
+        }
     }
 
     &__grid4 {
@@ -65,11 +93,26 @@
 
     &__icon {
         display: none !important;
+
+        @media screen and (min-width: 1024px) {
+            display: block !important;
+            margin-right: 10px;
+        }
     }
 
     &__link {
         text-decoration: none;
         color: #fff;
+
+        @media screen and (min-width: 1024px) {
+            @include flex;
+            justify-content: start;
+
+            &:hover {
+                opacity: 0.6;
+                transition: 0.4s;
+            }
+        }
     }
 
     &__line2 {
@@ -78,11 +121,29 @@
         width: 100%;
         background: #fff;
         margin: 5vh 0 5vh 0;
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
     }
 
     &__unit {
         width: 80%;
         margin: 0 auto 5.5vh;
+
+        @media screen and (min-width: 1024px) {
+            @include flex;
+            margin: -4vh auto 0;
+            width: 90%;
+        }
+    }
+
+    &__flex {
+        @media screen and (min-width: 1024px) {
+            flex-basis: 45%;
+            @include flex;
+            align-items: start;
+        }
     }
 
     &__menu2 {
@@ -90,6 +151,14 @@
         margin: 0 auto 2vh;
         line-height: 1.8;
         font-size: 13px;
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            @include flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 8%;
+        }
     }
 
     &__ttl {
@@ -99,6 +168,12 @@
         position: relative;
         margin-bottom: 1vh;
 
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 1.5vh;
+            pointer-events: none;
+            padding-left: 5px;
+        }
+
         // *アイコンの＋と×*/ 
         &::before,
         &::after {
@@ -107,6 +182,10 @@
             width: 15px;
             height: 2px;
             background-color: #D4CAAF;
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
         }
 
         &::before {
@@ -120,7 +199,6 @@
             top: 48%;
             left: 0px;
             transform: rotate(90deg);
-
         }
     }
 
@@ -129,24 +207,52 @@
         display: none;
         /*はじめは非表示*/
         margin-left: 24px;
+
+        @media screen and (min-width: 1024px) {
+            margin: 0 0 2vh 5px;
+            display: block;
+        }
     }
 
     &__calendar {
         display: none;
-    }
 
-    &__icon {
-        display: none;
+        @media screen and (min-width: 1024px) {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 2vh;
+        }
     }
 
     &__airbnb {
         display: none;
-    }
 
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+    
     &__link2 {
         text-decoration: none;
         color: #fff;
         font-size: 14px;
+        
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid #fff;
+            border-radius: 30px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 13px;
+
+            &:hover {
+                opacity: 0.6;
+                transition: 0.4s;
+            }
+        }
     }
 
     &__line3 {
@@ -154,105 +260,20 @@
         height: 1px;
         width: 100%;
         background: #fff;
-        margin-bottom: 4vh;
+        margin-bottom: 36px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     &__copy {
         text-align: center;
         font-size: 12px;
-        padding-bottom: 5vh;
-    }
-}
+        padding-bottom: 36px;
 
-@media screen and (min-width: 768px) {
-    .footer {
-
-        &__wrap {
-            padding-top: 8vh;
-            display: flex;
-            flex-direction: column-reverse;
-        }
-
-        &__box {
-            padding: 0 0 4vh;
-        }
-
-        &__logo {
-            height: 130px;
-            width: 130px;
-        }
-
-        &__line {
-            width: 42%;
-        }
-
-        &__menu {
-            width: 80%;
-            margin-bottom: -7vh;
-            grid-template-columns: 22% 28% 28% 22%;
-            grid-template-areas: "area1 area2 area3 area4";
-        }
-
-        &__grid2 {
-            justify-self: left;
-        }
-
-        &__grid3 {
-            justify-self: right;
-        }
-
-        &__icon {
-            display: block !important;
-            margin-right: 10px;
-        }
-
-        &__link {
-            @include flex;
-            justify-content: start;
-        }
-
-        &__line2 {
-            display: none;
-        }
-
-        &__unit {
-            @include flex;
-            margin: 0 auto;
-            align-items: start;
-            padding-left: 7%;
-            width: 95%;
-        }
-
-        &__menu2 {
-            @include flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        &__ttl {
-            margin-bottom: 1.5vh;
-        }
-
-        &__txt2 {
-            margin-bottom: 2vh;
-        }
-
-        &__calendar {
-            display: block;
-            width: 70%;
-            height: auto;
-            margin-bottom: 2vh;
-        }
-
-        &__airbnb {
-            display: block;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid #fff;
-            border-radius: 30px;
-            padding: 5px;
-            width: 72%;
-            text-align: center;
-            font-size: 13px;
+        @media screen and (min-width: 768px) {
+            padding: 24px;
         }
     }
 }

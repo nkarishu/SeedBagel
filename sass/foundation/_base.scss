@@ -9,12 +9,11 @@ body {
 
 main {
     background: #FAF8F5;
-    margin-bottom: 553px;
     transition: 0.4s;
+}
 
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 580px;
-    }
+.wrapper {
+    display: none;
 }
 
 .img {
@@ -37,9 +36,9 @@ main {
         margin-bottom: 5vh;
 
         @media screen and (min-width: 1024px) {
-            height: 63vh;
+            height: 50vh;
             width: 70%;
-            margin: -9vh 0 5vh 10%;
+            margin: -10vh 0 0 5%;
         }
     }
 
@@ -48,7 +47,8 @@ main {
         margin: 0 auto;
 
         @media screen and (min-width: 1024px) {
-            margin: 5%;
+            width: auto;
+            margin: 4% 5%;
         }
     }
 
@@ -65,18 +65,38 @@ main {
         margin-bottom: 2vh;
     }
 
+    &__links {
+        @media screen and (min-width: 1024px) {
+            @include flex;
+            justify-content: start;
+        }
+    }
+
     &__link {
         font-size: 13px;
         margin-bottom: 3vh;
+
+        @media screen and (min-width: 1024px) {
+            margin-right: 30px;
+        }
     }
 
     &__os {
-        border: #000 1px solid;
-        border-radius: 12px;
+        border: #D4CAAF 1px solid;
+        border-radius: 30px;
         display: inline-block;
         padding: 10px 25px;
         text-decoration: none;
-        color: #000;
+        color: #96824e;
+        
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background: #D4CAAF;
+                color: #fff;
+                border: #D4CAAF 1px solid;
+                transition: 0.4s;
+            }
+        }
     }
 
     &__arrow {
@@ -91,19 +111,19 @@ main {
     @media screen and (min-width: 1024px) {
         width: 60%;
     }
-
+    
     &__box {
         @include flex;
         margin-bottom: 3vh;
     }
-
+    
     &__ttl {
         @media screen and (min-width: 1024px) {
             @include pcttl;
             margin-left: 5px;
         }
     }
-
+    
     &__link {
         font-size: 13px;
         text-decoration: none;
@@ -112,11 +132,11 @@ main {
         display: inline-block;
         padding: 5px 20px;
     }
-
+    
     &__jump {
         margin-left: 10px;
     }
-
+    
     &__page {
         font-size: 13px;
         text-decoration: none;
@@ -125,6 +145,13 @@ main {
         margin-bottom: 3vh;
         padding: 10px 20px;
         display: block;
+
+        @media screen and (min-width: 1024px) {
+            @include flex;
+            justify-content: start;
+            gap: 50px;
+            padding: 20px;
+        }
     }
 
     &__arrow::before {
@@ -176,13 +203,13 @@ main {
 
     &__sub {
         @media screen and (min-width: 1024px) {
-            flex-basis: 20%;
+            flex-basis: 35%;
         }
     }
 
     &__txt {
         @media screen and (min-width: 1024px) {
-            flex-basis: 80%;
+            flex-basis: 65%;
         }
     }
 
@@ -191,9 +218,8 @@ main {
 
         @media screen and (min-width: 1024px) {
             display: block;
-            width: 55%;
+            width: 600px;
             height: 45vh;
-            // flex-basis: 40%;
         }
 
     }

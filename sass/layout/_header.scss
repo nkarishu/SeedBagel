@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: rgba(255, 255, 255, 0.3);
+    // background: rgba(255, 255, 255, 0.3);
 
     @media screen and (min-width: 1024px) {
         background: none;
@@ -12,7 +12,7 @@
     &__unit {
         @media screen and (min-width: 1024px) {
             @include flex;
-            width: 75%;
+            width: 80%;
             margin: 32px auto;
             padding: 5px 36px;
             background: rgba(255, 255, 255, 0.815);
@@ -37,6 +37,7 @@
             height: 40px;
             width: auto;
             transition: 0.3s;
+            opacity: 0.8;
 
             &:hover {
                 opacity: 0.3;

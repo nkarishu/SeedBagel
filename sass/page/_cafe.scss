@@ -1,8 +1,3 @@
-main {
-  z-index: 2;
-  background: #FAF8F5;
-}
-
 .cafemv {
   height: 100vh;
   position: relative;
@@ -43,12 +38,16 @@ main {
       line-height: 1.7;
     }
   }
-
+  
   &__pic {
     height: 100vh;
     width: 65%;
     position: absolute;
     left: 35%;
+    @media screen and (min-width: 1024px) {
+      left: 58%;
+      width: 42%;
+    }
   }
 
   &__img {
@@ -62,42 +61,7 @@ main {
   margin-bottom: 15vh;
 
   @media screen and (min-width: 1024px) {
-    margin-bottom: 30vh;
-  }
-
-  &__box1 {
-    width: 80%;
-    margin: 0 auto;
-
-    @media screen and (min-width: 1024px) {
-      margin: 5vh 0 0 12%;
-      height: 40vh;
-      width: 55%;
-    }
-  }
-
-  &__box2 {
-    width: 80%;
-    margin: 0 auto;
-
-    @media screen and (min-width: 1024px) {
-      margin: 5vh auto 0 auto;
-      height: 40vh;
-      width: 50%;
-      position: relative;
-
-      &::before {
-        content: "";
-        display: block;
-        height: 60vh;
-        width: 140%;
-        background: #fff;
-        position: absolute;
-        top: -20vh;
-        left: -20%;
-        z-index: -1;
-      }
-    }
+    margin-bottom: 20vh;
   }
 
   &__ttl {
@@ -129,8 +93,8 @@ main {
 
     @media screen and (min-width: 1024px) {
       margin: 15vh auto 0 0;
-      height: 60vh;
-      width: 60%;
+      height: 65vh;
+      width: 70%;
     }
   }
 
@@ -140,10 +104,18 @@ main {
     width: 70%;
 
     @media screen and (min-width: 1024px) {
-      // margin: -20vh 0 0 45%;
-      // height: 25vh;
-      // width: 25%;
       display: none;
+    }
+  }
+
+  &__box1 {
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      margin: 8vh 0 0 12%;
+      height: 40vh;
+      width: 60%;
     }
   }
 
@@ -153,9 +125,25 @@ main {
     width: 90%;
 
     @media screen and (min-width: 1024px) {
-      margin: -50vh 0 0 auto;
-      height: 60vh;
-      width: 25%;
+      margin: -50vh 0 20vh auto;
+      height: 52vh;
+      width: 20%;
+    }
+  }
+
+  &__img {
+    @media screen and (min-width: 1024px) {
+      object-position: 80% 10%;
+    }
+  }
+
+  &__flex {
+    @media screen and (min-width: 1024px) {
+      @include flex;
+      border: 5px solid #fff;
+      width: 90%;
+      margin: 0 auto;
+      padding: 2% 5%;
     }
   }
 
@@ -164,27 +152,30 @@ main {
     height: 30vh;
 
     @media screen and (min-width: 1024px) {
-      margin: 15vh auto 0 auto;
-      height: 50vh;
-      width: 60%;
+      margin: 0 5% 0vh 0%;
+      height: 40vh;
+      width: 40%;
     }
   }
 
-  &__pic5 {
-    display: none;
+  &__box2 {
+    width: 80%;
+    margin: 0 auto;
 
     @media screen and (min-width: 1024px) {
-      display: block;
-      margin: -65vh 0 0 auto;
-      height: 55vh;
-      width: 25%;
+      margin: 0;
+      width: 50%;
     }
   }
+
+  // &__pic5 {
+  //   display: none;
+  // }
 }
 
 .cafebagels {
   width: 80%;
-  margin: 0 auto 25vh;
+  margin: 0 auto 35vh;
   text-align: center;
 
   &__ttl {
@@ -196,7 +187,7 @@ main {
 
   &__txt {
     font-size: 13px;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -205,8 +196,7 @@ main {
   height: 28vh;
 
   @media screen and (min-width: 1024px) {
-    height: 40vh;
-    background: red;
+    height: auto;
   }
 
   &-wrapper {
@@ -216,19 +206,26 @@ main {
   &-slide {
     @include flex;
     flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      background: rgba(255, 255, 255, 0.52);
+      padding: 2%;
+    }
   }
 
   &-pic {
     width: 40%;
 
     @media screen and (min-width: 1024px) {
-      width: 30%;
+      // width: 250px;
+      // height: 250px;
+      width: 200px;
     }
   }
 
   &-button-prev::after,
   &-button-next::after {
-    color: lightgrey;
+    color: rgb(0, 0, 0);
   }
 
   &-scrollbar {

@@ -2,14 +2,34 @@
   @include flex;
   flex-direction: column-reverse;
   margin-bottom: 10vh;
+  height: 100vh;
+  position: relative;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 
   &__box1 {
     width: 80%;
+
+    @media screen and (min-width: 1024px) {
+      // flex-basis: 60%;
+      width: 43%;
+      position: absolute;
+      top: 52vh;
+      left: 7%;
+    }
   }
 
   &__ttl {
     font-size: 17px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin-bottom: 5vh;
+    }
   }
 
   &__txt {
@@ -17,26 +37,44 @@
   }
 
   &__box2 {
-    // height: 40vh;
     position: relative;
     width: 100%;
     margin-bottom: 5vh;
+
+    @media screen and (min-width: 1024px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+    }
   }
-  
+
   &__sub {
     position: absolute;
     top: 47vh;
     right: 2%;
     color: #fff;
     font-size: 40px;
-    line-height: 1.1;
+    line-height: 1.7;
     font-weight: 800;
-    opacity: 0.7;
+    opacity: 1;
+    filter: drop-shadow(3px 3px 5px #00000077);
+    
+
+    @media screen and (min-width: 1024px) {
+      font-size: 80px;
+      top: 12vh;
+      left: 40px;
+    }
   }
-  
+
   &__pic {
     height: 70vh;
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      height: 100vh;
+    }
   }
 
 }
@@ -45,15 +83,51 @@
   background: #fff;
   padding: 10% 0;
   margin-bottom: 15vh;
-  
-  &__ttl {
-    width: 80%;
-    margin: 0 auto 2vh;
-    font-size: 15px;
+
+  @media screen and (min-width: 1024px) {
+    // margin-top: -10vh;
+    padding: 5% 20%;
+    text-align: center;
   }
-  
+
+  &__ttl {
+    margin: 0 auto 5vh;
+    font-size: 15px;
+    position: relative;
+    padding: 1em 1.5em;
+    width: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-top: 2px solid #000;
+      border-left: 2px solid #000;
+    }
+
+    &::before {
+      right: 0;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+    }
+
+    @media screen and (min-width: 1024px) {
+      @include pcttl;
+      font-size: 26px;
+    }
+  }
+
   &__txt {
-    width: 80%;
     margin: 0 auto 2vh;
   }
 }
@@ -61,39 +135,67 @@
 .sdgsmain {
   margin-bottom: 10vh;
 
+  @media screen and (min-width: 1024px) {
+    @include flex;
+    width: 80%;
+    margin: 0 auto 10vh;
+  }
+
   &:last-of-type {
     padding-bottom: 10vh;
   }
 
-  &__box1 {
-    position: relative;
+  &:nth-last-of-type(2) {
+    @media screen and (min-width: 1024px) {
+      flex-direction: row-reverse;
+    }
   }
 
-  &__sub {
-    position: absolute;
-    top: -2px;
-    left: 5px;
-    font-size: 60px;
-    font-weight: 800;
-    color: #fff;
-    opacity: 0.8;
-    width: 100%;
+  &__box1 {
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
+      flex-basis: 50%;
+    }
   }
 
   &__pic {
     height: 30vh;
     width: auto;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      height: 65vh;
+      padding-right: 50px;
+      margin-bottom: 0;
+
+      &2 {
+        padding-left: 50px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 10px;
   }
 
   &__box2 {
     width: 80%;
     margin: 0 auto;
-  }
 
+    @media screen and (min-width: 1024px) {
+      flex-basis: 50%;
+    }
+  }
+  
   &__ttl {
     font-size: 15px;
     margin-bottom: 2vh;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
 
   &__txt {

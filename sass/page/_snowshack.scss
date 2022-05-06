@@ -50,7 +50,7 @@
     @media screen and (min-width: 1024px) {
       width: 80%;
       height: 80vh;
-      margin: 0 auto;
+      margin: 0 auto 5vh;
     }
   }
 
@@ -127,7 +127,7 @@
 
     @media screen and (min-width: 1024px) {
       width: 80%;
-      margin-left: 10%;
+      margin-left: 8%;
     }
   }
 
@@ -139,8 +139,9 @@
 .ssactivity {
   width: 80%;
   margin: 0 auto 15vh;
-
+  
   @media screen and (min-width: 1024px) {
+    width: 70%;
     margin-bottom: 30vh;
   }
 
@@ -159,36 +160,36 @@
 
     @media screen and (min-width: 1024px) {
       text-align: center;
+      margin: 0 auto 5vh;
     }
   }
 }
 
 .swiper2 {
   width: 100%;
-  // background: red;
 
   &-wrapper {
     height: auto !important;
-  }
-
-  &-slide {
-    @include flex;
-    flex-direction: column;
   }
 
   &-pic {
     width: 100%;
     height: 34vh;
     position: relative;
+
+    @media screen and (min-width: 1024px) {
+      height: 350px;
+      border: 1px solid rgba(139, 139, 139, 0.219);
+    }
   }
 
   &__box {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2% 5%;
+    padding: 4% 5%;
     font-size: 12px;
   }
 
@@ -201,18 +202,15 @@
     line-height: 1.5;
   }
 
-  // &-button-prev,
-  // &-button-next {
-  //   position: absolute !important;
-  // }
-
   &-button-prev::after,
   &-button-next::after {
     display: none;
-    // position: relative !important;
-    // top: 0;
-    // right: 0;
-    // color: rgb(43, 214, 114);
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+      color: #000;
+      margin-top: 70px;
+    }
   }
 
   &-pagination {
@@ -251,8 +249,15 @@
 }
 
 .pageinfo__ttl_snowshack {
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 800;
-  width: 85%;
-  margin: 5vh auto -10vh 80px;
+  letter-spacing: 5px;
+  width: 80%;
+  margin: 5vh auto -10vh;
+
+  @media screen and (min-width: 1024px) {
+    margin: 5vh auto -10vh 50px;
+    font-size: 62px;
+    width: 510px;
+  }
 }

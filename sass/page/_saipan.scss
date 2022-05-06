@@ -6,6 +6,10 @@ body {
   font-size: 13px;
 }
 
+.saipan {
+  background: url(../../images/saipan/bg.jpg);
+}
+
 .saipanmv {
   background: #D4C9B3;
   height: 53vh;
@@ -29,7 +33,7 @@ body {
     transition: all 3s;
 
     @media screen and (min-width: 1024px) {
-      margin: 0vh auto 12vh;
+      margin: 0vh auto 5vh;
       width: 45%;
       height: auto;
     }
@@ -51,22 +55,27 @@ body {
 .saipanpan {
   margin-bottom: 15vh;
 
-  &__ttl {
+  &__box {
     width: 80%;
     margin: 0 auto;
+  }
+
+  &__ttl {
     font-size: 16px;
     margin-bottom: 2vh;
   }
 
   &__txt {
-    width: 80%;
-    margin: 0 auto 2vh;
+    margin-bottom: 2vh;
   }
 
   &__pic {
-    width: 80%;
     height: 30vh;
-    margin: 0 auto 5vh;
+    margin-bottom: 5vh;
+  }
+
+  &__img {
+    border-radius: 10px;
   }
 }
 
@@ -99,25 +108,37 @@ body {
   .saipanhistory,
   .saipanpan {
     @include flex;
+    width: 80%;
+    margin: 0 auto 15vh;
+
+    &__box {
+      flex-basis: 50%;
+      width: 90%;
+    }
 
     &__ttl {
       @include pcttl;
     }
 
     &__pic {
-      flex-basis: 45%;
+      flex-basis: 50%;
       height: 50vh;
     }
+  }
+
+  .saipanhistory {
+    margin-bottom: 5vh;
 
     &__box {
-      flex-basis: 55%;
+      margin: 0 3% 0 7%;
     }
-  }
-  .saipanhistory {
-    margin-bottom: 0;
   }
 
   .saipanpan {
     flex-direction: row-reverse;
+
+    &__box {
+      margin: 0 7% 0 3%;
+    }
   }
 }

@@ -1,17 +1,18 @@
 $(function () {
 
     const swiper1 = new Swiper('.swiper1', {
-        // slidesPerView: 1,
-        // breakpoints: {
-        //     1024: {
-        //         slidesPerView: 3,
-        //     },
-        // },
+        breakpoints: {
+            1024: {
+                slidesPerView: 5,
+            },
+        },
 
         freeMode: {
             enabled: true,
             sticky: true,
         },
+
+        spaceBetween: 20,
 
         navigation: {
             nextEl: '.swiper1-button-next',
@@ -27,10 +28,18 @@ $(function () {
     })
 
     const swiper2 = new Swiper('.swiper2', {
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+
         freeMode: {
             enabled: true,
             sticky: true,
         },
+
+        spaceBetween: 40,
 
         navigation: {
             nextEl: '.swiper2-button-next',
