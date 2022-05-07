@@ -8,11 +8,27 @@ body {
 
 .saipan {
   background: url(../../images/saipan/bg.jpg);
+
+  &__scroll {
+    display: block !important;
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 1024px) {
+      top: 97vh;
+    }
+  }
+
+  &__info {
+    height: 15vh;
+  }
 }
 
 .saipanmv {
   background: #D4C9B3;
-  height: 53vh;
+  height: 100vh;
   @include flex;
   flex-direction: column;
   justify-content: center;
@@ -20,31 +36,31 @@ body {
   margin-bottom: 15vh;
 
   @media screen and (min-width: 1024px) {
-    height: 100vh;
-    padding-top: 10vh;
     margin-bottom: 30vh;
   }
 
   &__logo {
-    width: 80%;
+    width: 90%;
     height: auto;
-    margin: 0 auto 5vh;
-    transform: translateY(30px) !important;
-    transition: all 3s;
-
+    position: absolute;
+    top: 30%;
+    
     @media screen and (min-width: 1024px) {
-      margin: 0vh auto 5vh;
-      width: 45%;
-      height: auto;
+      position: absolute;
+      top: 22%;
+      width: 40%;
     }
   }
-
+  
   &__pic {
+    position: absolute;
+    top: 45%;
     width: 90%;
-    margin-bottom: 5vh;
-
+    
     @media screen and (min-width: 1024px) {
-      width: 65%;
+      position: absolute;
+      top: 38%;
+      width: 60%;
       height: auto;
     }
   }
@@ -56,7 +72,7 @@ body {
   margin-bottom: 15vh;
 
   &__box {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -73,10 +89,6 @@ body {
     height: 30vh;
     margin-bottom: 5vh;
   }
-
-  &__img {
-    border-radius: 10px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -88,20 +100,24 @@ body {
     flex-direction: row-reverse;
     align-items: start;
 
+    &__box {
+      flex-basis: 60%;
+    }
+    
     &__ttl {
       font-size: 26px;
       margin-bottom: 5vh;
       width: 100%;
     }
-
+    
     &__txt {
       width: 90%;
       margin-right: 10%;
     }
-
+    
     &__pic {
+      flex-basis: 40%;
       height: 70vh;
-      width: 100%;
     }
   }
 
@@ -124,6 +140,10 @@ body {
       flex-basis: 50%;
       height: 50vh;
     }
+
+    &__img {
+      border-radius: 30px;
+    }
   }
 
   .saipanhistory {
@@ -140,5 +160,10 @@ body {
     &__box {
       margin: 0 7% 0 3%;
     }
+  }
+
+  .saipan__info {
+    width: 510px;
+    height: 20vh;
   }
 }

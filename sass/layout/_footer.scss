@@ -46,49 +46,52 @@
     }
 
     &__menu {
-        margin: 0 auto;
-        @include flex;
-        width: 85%;
+        text-align: center;
+        font-size: 16px;
+        margin: 36px 0;
         line-height: 3;
-        display: grid;
-        grid-template-columns: repeat(1fr 1fr);
-        grid-template-rows: repeat(1fr 1fr);
-        grid-template-areas: "area1 area2"
-            "area3 area4";
 
         @media screen and (min-width: 1024px) {
+            margin: 0 auto -7vh;
             font-size: 16px;
             width: 80%;
-            margin-bottom: -7vh;
+            display: grid;
             grid-template-columns: 22% 28% 28% 22%;
             grid-template-areas: "area1 area2 area3 area4";
         }
     }
 
     &__grid1 {
-        grid-area: "area1";
+        @media screen and (min-width: 1024px) {
+            grid-area: "area1";
+        }
     }
 
     &__grid2 {
-        grid-area: "area2";
-        justify-self: end;
-
         @media screen and (min-width: 1024px) {
+            grid-area: "area2";
             justify-self: left;
         }
     }
 
     &__grid3 {
-        grid-area: "area3";
-
         @media screen and (min-width: 1024px) {
+            grid-area: "area3";
             justify-self: right;
         }
     }
 
     &__grid4 {
-        grid-area: "area4";
-        justify-self: end;
+        @media screen and (min-width: 1024px) {
+            grid-area: "area4";
+            justify-self: end;
+        }
+    }
+
+    &__grid5 {
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
     }
 
     &__icon {
@@ -115,23 +118,11 @@
         }
     }
 
-    &__line2 {
-        display: inline-block;
-        height: 1px;
-        width: 100%;
-        background: #fff;
-        margin: 5vh 0 5vh 0;
-
-        @media screen and (min-width: 1024px) {
-            display: none;
-        }
-    }
-
     &__unit {
-        width: 80%;
-        margin: 0 auto 5.5vh;
+        display: none;
 
         @media screen and (min-width: 1024px) {
+            display: block;
             @include flex;
             margin: -4vh auto 0;
             width: 90%;
@@ -166,49 +157,21 @@
         font-size: 14px;
         padding-left: 24px;
         position: relative;
-        margin-bottom: 1vh;
+        height: 50px;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: 1.5vh;
+            // margin-bottom: 1.5vh;
             pointer-events: none;
             padding-left: 5px;
-        }
-
-        // *アイコンの＋と×*/ 
-        &::before,
-        &::after {
-            position: absolute;
-            content: '';
-            width: 15px;
-            height: 2px;
-            background-color: #D4CAAF;
-
-            @media screen and (min-width: 1024px) {
-                display: none;
-            }
-        }
-
-        &::before {
-            top: 48%;
-            left: 0px;
-            transform: rotate(0deg);
-
-        }
-
-        &::after {
-            top: 48%;
-            left: 0px;
-            transform: rotate(90deg);
         }
     }
 
     &__txt2 {
-        font-size: 12px;
         display: none;
-        /*はじめは非表示*/
-        margin-left: 24px;
-
+        
         @media screen and (min-width: 1024px) {
+            height: 110px;
+            font-size: 12px;
             margin: 0 0 2vh 5px;
             display: block;
         }
@@ -230,14 +193,15 @@
 
         @media screen and (min-width: 1024px) {
             display: block;
+            margin-top: 2vh;
         }
     }
-    
+
     &__link2 {
         text-decoration: none;
         color: #fff;
         font-size: 14px;
-        
+
         @media screen and (min-width: 768px) {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);

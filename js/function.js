@@ -2,14 +2,6 @@ $(function () {
 
     $('.wrapper').fadeIn(1000); //1秒かけてフェードイン！
 
-    // フッター高さを取得して代入
-    $(document).ready(function () {
-        footerheight = $('.footer').height(); //フッターの高さを取得
-        $(".footer").css("height", footerheight + "px"); //取得したフッターの高さ分#wrapperにpadding-bottomをpxで指定
-        $("main").css("margin-bottom", footerheight + "px"); //取得したフッターの高さ分#wrapperにpadding-bottomをpxで指定
-console.log(footerheight);
-    });
-
     // ハンバーガーメニューボタン
     $('#btn').on('click', function () {
         $('#btn__top').toggleClass('rotate-top');
@@ -53,11 +45,11 @@ console.log(footerheight);
 
 });
 
-$(function() {
-	setTimeout(function(){
-		$('.start p').fadeIn(1600);
-	},500); //0.5秒後にロゴをフェードイン!
-	setTimeout(function(){
-		$('.start').fadeOut(500);
-	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
-});
+// $(function() {
+// 	setTimeout(function(){
+// 		$('.start p').fadeIn(1600);
+// 	},500); //0.5秒後にロゴをフェードイン!
+// 	setTimeout(function(){
+// 		$('.start').fadeOut(500);
+// 	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+// });

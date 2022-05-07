@@ -24,7 +24,7 @@
 
   &__txt {
     @media screen and (min-width: 1024px) {
-      @include pcttl;
+      display: none;
     }
   }
 
@@ -49,9 +49,10 @@
     position: absolute;
     top: 85vh;
     right: 10%;
-
+    
     @media screen and (min-width: 1024px) {
-      height: 45vh;
+      top: 75vh;
+      height: 40vh;
       width: 30%;
       left: -8%;
     }
@@ -163,7 +164,8 @@
 
 .pageinfo__farm {
   width: 80%;
-  margin: 1vh auto -2vh;
+  margin: -2vh auto;
+  height: 20vh;
 
   @media screen and (min-width: 1024px) {
     width: 510px;

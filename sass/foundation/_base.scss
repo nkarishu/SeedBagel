@@ -1,7 +1,7 @@
 $grey: #707070;
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', 'Kosugi Maru', 'Zen Kaku Gothic New', sans-serif;
     letter-spacing: 0.1rem;
     line-height: 1.6rem;
     font-size: 13px;
@@ -10,6 +10,11 @@ body {
 main {
     background: #FAF8F5;
     transition: 0.4s;
+    margin-bottom: 540px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 635px;
+    }
 }
 
 .wrapper {
@@ -22,8 +27,70 @@ main {
     object-fit: cover;
 }
 
+/*スクロールダウン全体の場所*/
+.scrolldown {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+        /*描画位置※位置は適宜調整してください*/
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        /*全体の高さ*/
+        height: 50px;
+    }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+    /*描画位置*/
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    /*テキストの形状*/
+    color: #000;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 5px;
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: #000;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 15px;
+        opacity: 0.5;
+    }
+
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 10px;
+        top: 80px;
+        opacity: 0;
+    }
+}
+
 .cafeshop {
-    margin-bottom: 15vh;
+    margin-bottom: 30vh;
 
     @media screen and (min-width: 1024px) {
         background: #fff;
@@ -54,8 +121,9 @@ main {
 
     &__ttl {
         margin-bottom: 2vh;
-
+        
         @media screen and (min-width: 1024px) {
+            margin-bottom: 5vh;
             @include pcttl;
         }
     }
@@ -69,31 +137,32 @@ main {
         @media screen and (min-width: 1024px) {
             @include flex;
             justify-content: start;
+            margin-top: 5vh;
         }
     }
 
     &__link {
         font-size: 13px;
         margin-bottom: 3vh;
-
+        
         @media screen and (min-width: 1024px) {
-            margin-right: 30px;
+            margin: 0 30px 0 0;
         }
     }
 
     &__os {
-        border: #D4CAAF 1px solid;
         border-radius: 30px;
         display: inline-block;
-        padding: 10px 25px;
+        padding: 8px 25px;
         text-decoration: none;
-        color: #96824e;
-        
+        background: #D4CAAF;
+        color: #000;
+
         @media screen and (min-width: 1024px) {
             &:hover {
-                background: #D4CAAF;
-                color: #fff;
-                border: #D4CAAF 1px solid;
+                color: #96824e;
+                background: #fff;
+                border: #96824e 1px solid;
                 transition: 0.4s;
             }
         }
@@ -111,19 +180,19 @@ main {
     @media screen and (min-width: 1024px) {
         width: 60%;
     }
-    
+
     &__box {
         @include flex;
         margin-bottom: 3vh;
     }
-    
+
     &__ttl {
         @media screen and (min-width: 1024px) {
             @include pcttl;
             margin-left: 5px;
         }
     }
-    
+
     &__link {
         font-size: 13px;
         text-decoration: none;
@@ -132,11 +201,11 @@ main {
         display: inline-block;
         padding: 5px 20px;
     }
-    
+
     &__jump {
         margin-left: 10px;
     }
-    
+
     &__page {
         font-size: 13px;
         text-decoration: none;
@@ -160,7 +229,7 @@ main {
 }
 
 .pageinfo {
-    padding: 2vh 0 5vh;
+    padding: 2vh 0;
     font-size: 13px;
     background: #D4CAAF;
 
@@ -176,10 +245,11 @@ main {
 
     &__ttl {
         width: 90%;
-        height: 20vh;
+        height: 10vh;
         margin: 3vh auto;
-
+        
         @media screen and (min-width: 1024px) {
+            height: 15vh;
             width: 510px;
             margin: -2vh 0 0 10%;
         }
