@@ -67,6 +67,8 @@
 
   &__ttl {
     margin-bottom: 2vh;
+    font-size: 24px;
+    line-height: 1.5;
 
     @media screen and (min-width: 1024px) {
       @include pcttl;
@@ -76,6 +78,7 @@
 
   &__ttl2 {
     margin-bottom: 2vh;
+    font-size: 18px;
 
     @media screen and (min-width: 1024px) {
       @include pcttl;
@@ -110,7 +113,7 @@
   // }
 
   &__box1 {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
     @media screen and (min-width: 1024px) {
@@ -160,7 +163,7 @@
   }
 
   &__box2 {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
     @media screen and (min-width: 1024px) {
@@ -172,14 +175,16 @@
 }
 
 .cafebagels {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 35vh;
   text-align: center;
 
   &__ttl {
+    font-size: 18px;
+    margin-bottom: 2vh;
+
     @media screen and (min-width: 1024px) {
       @include pcttl;
-      margin-bottom: 2vh;
     }
   }
 
@@ -221,10 +226,10 @@
 
   &-button-prev,
   &-button-next {
-    display: none!important;
+    display: none !important;
 
     @media screen and (min-width: 1024px) {
-      display: block!important;
+      display: block !important;
     }
   }
 
